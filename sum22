@@ -1,0 +1,37 @@
+# Write a program to Factorial of n numbers
+
+package Assessment;
+
+import java.util.Scanner;
+
+public class Factorial {
+    //using recursion
+     static int count = 1,ans = 1;
+    public static int factorial(int num) {
+
+        if (count <= num) {
+            ans = ans * count;
+            count++;
+           factorial(num);
+        }
+        return ans;
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int num=s.nextInt();
+        int ans1=1;
+        //using for loop
+       for(int i=1;i<=num;i++){
+            ans1=ans1*i;
+        }
+       System.out.println(ans1);
+       //using recursion
+        factorial(num);
+        System.out.println("using recursion: "+ans);
+
+
+        //using recursion
+         factorial(num);
+    }
+}
